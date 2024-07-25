@@ -13,8 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Logo from './Images/Logo-CodeJourney.png';
-const pages = ['About Me', 'Projects', 'Skills'];
-const settings = ['About Me', 'Projects', 'Skills'];
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+
+
+const pages = ['Home','Projects', 'Skills','About Me'];
+const settings = ['Home','Projects', 'Skills','About Me'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
