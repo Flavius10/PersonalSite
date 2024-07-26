@@ -1,8 +1,9 @@
 import React from 'react'
+import './Stylesheets/GeneralStyleSheets.css'
 
 const ProjectsPage = () => {
   return (
-    <div>Projects</div>
+    <div className="body">Projects</div>
   );
 }
 

@@ -4,7 +4,8 @@ import HomePage from './Pages/HomePage';
 import ProjectsPage from './Pages/ProjectsPage';
 import SkillsPage from './Pages/SkillsPage';
 import AboutPage from './Pages/AboutMePage';
-import NavBar from './NavBar';
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer.js';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
             <Route path="/project" element={<ProjectsPage/>} />
             <Route path="/skills" element={<SkillsPage/>} />
         </Routes>
-       
+        <Footer/>
     </Router>
 
   );

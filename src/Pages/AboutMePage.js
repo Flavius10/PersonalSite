@@ -1,8 +1,12 @@
 import React from 'react'
+import './Stylesheets/GeneralStyleSheets.css'
 
 const AboutMePage = () => {
   return (
-    <div>About Me</div>
+    <div className="body">
+      About Me
+    </div>
+
   )
 }
 

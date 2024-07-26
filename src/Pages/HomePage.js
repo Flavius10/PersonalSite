@@ -1,8 +1,9 @@
 import React from 'react'
+import './Stylesheets/GeneralStyleSheets.css'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div className="body">HomePage</div>
   )
 }
 
