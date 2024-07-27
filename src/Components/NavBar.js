@@ -19,7 +19,7 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['Home','Projects', 'Skills','About Me'];
+const pages = ['Home','About Me','Portofolio', 'Contact',];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,9 +36,9 @@ function NavBar() {
   const handlePageNavigation = (page) =>{
     const paths = {
       'Home' : '/',
-      'Projects' : '/project',
+      'Portofolio' : '/portofolio',
       'About Me' : '/about',
-      'Skills' : '/skills'
+      'Contact' : '/contact'
     }
     navigate(paths[page]);
   };
@@ -64,7 +64,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="sticky" sx={{backgroundColor:"#839788"}}>
+    <AppBar position="static" sx={{backgroundColor:"#839788"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -92,7 +92,7 @@ function NavBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="./"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -158,7 +158,7 @@ function NavBar() {
                     }}
                 >
                 {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu} >
+                    <MenuItem key={page} onClick={()=>handlePageNavigation(page)} >
                     <Typography 
                         textAlign="center"
                         sx={{
