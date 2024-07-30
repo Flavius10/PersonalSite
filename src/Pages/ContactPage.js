@@ -14,6 +14,7 @@ const ContactPage = () => {
           height: '60vh',
           width: '100vw', 
           gap: 5,
+          border:2
         }}
       >
 
