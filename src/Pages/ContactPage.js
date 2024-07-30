@@ -46,7 +46,7 @@ const ContactPage = () => {
         />
         <TextField
           id="outlined-basic-2"
-          label="Email"
+          label="Message"
           variant="outlined"
           sx={{ width:{ xs: '40vw', md: '80vw'} }}
         />
