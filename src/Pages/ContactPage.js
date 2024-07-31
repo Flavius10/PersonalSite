@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, TextField, Button, Card, Chip, Stack, Divider} from '@mui/material';
 import { Typography } from '@mui/material';
+import axios from 'axios';
 
 const ContactPage = () => {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post(`http://localhost:3000/api/sendemail`, {
+        name,
+        email,
+        message
+      });
+      alert(response.data);
+    } catch (error) {
+      console.error("There was an error sending the email!", error);
+      alert("Error sending email.");
+    }
+  };
+
   return (
     <div className="body">
 
@@ -26,7 +46,8 @@ const ContactPage = () => {
         }}>Contact
         </Typography>
 
-        <Typography sx={{fontSize:30, 
+        <Typography 
+        onChange={(e) => setName(e.target.value)}sx={{fontSize:30, 
           fontFamily:'monospace',
           justifyContent: 'center'
         }}>To contact me, leave me a message...
@@ -36,22 +57,27 @@ const ContactPage = () => {
           id="outlined-basic-1"
           label="Nume"
           variant="outlined"
+          onChange={(e) => setName(e.target.value)}
           sx={{ width:{ xs: '40vw', md: '80vw'} }}
         />
         <TextField
           id="outlined-basic-2"
           label="Email"
           variant="outlined"
+          onChange={(e) => setEmail(e.target.value)}
           sx={{ width:{ xs: '40vw', md: '80vw'} }}
         />
         <TextField
-          id="outlined-basic-2"
+          id="outlined-multiline-flexible"
           label="Message"
+          multiline
           variant="outlined"
+          onChange={(e) => setMessage(e.target.value)}
           sx={{ width:{ xs: '40vw', md: '80vw'} }}
         />
 
       <Button variant="contained"
+              onClick={handleSubmit}
               sx={{width:{xs: 100, md: 150}, height: 50, backgroundColor: '#BAA898', color:'black'}}>
         Submit
       </Button>

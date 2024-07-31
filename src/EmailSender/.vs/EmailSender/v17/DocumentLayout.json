@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Folders\\Informatica\\React\\codejourney\\EmailSender\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{481CA159-E11B-48D3-A3F7-0538A867B8FB}|EmailSender\\EmailSender.csproj|c:\\folders\\informatica\\react\\codejourney\\emailsender\\emailsender\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{481CA159-E11B-48D3-A3F7-0538A867B8FB}|EmailSender\\EmailSender.csproj|solutionrelative:emailsender\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{481CA159-E11B-48D3-A3F7-0538A867B8FB}|EmailSender\\EmailSender.csproj|c:\\folders\\informatica\\react\\codejourney\\emailsender\\emailsender\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{481CA159-E11B-48D3-A3F7-0538A867B8FB}|EmailSender\\EmailSender.csproj|solutionrelative:emailsender\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Folders\\Informatica\\React\\codejourney\\EmailSender\\EmailSender\\Program.cs",
+              "RelativeDocumentMoniker": "EmailSender\\Program.cs",
+              "ToolTip": "C:\\Folders\\Informatica\\React\\codejourney\\EmailSender\\EmailSender\\Program.cs",
+              "RelativeToolTip": "EmailSender\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T17:15:29.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "C:\\Folders\\Informatica\\React\\codejourney\\EmailSender\\EmailSender\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "EmailSender\\Controllers\\EmailController.cs",
+              "ToolTip": "C:\\Folders\\Informatica\\React\\codejourney\\EmailSender\\EmailSender\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "EmailSender\\Controllers\\EmailController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T16:50:13.857Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
