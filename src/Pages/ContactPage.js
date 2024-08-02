@@ -5,84 +5,62 @@ import axios from 'axios';
 
 const ContactPage = () => {
 
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post(`http://localhost:3000/api/sendemail`, {
+      const response = await axios.post(`https://localhost:7229/api/sendmail`, {
         name,
         email,
         message
       });
-      alert(response.data);
+      alert('Email sent successfully: ' + response.data);
     } catch (error) {
       console.error("There was an error sending the email!", error);
-      alert("Error sending email.");
+      const errorMessage = error.response?.data?.message || error.message || "Error sending email.";
+      alert(errorMessage);
     }
   };
+
 
   return (
     <div className="body">
 
       {/* Form */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '60%',
-          width: '100vw', 
-          flex: '1',
-          gap: 5,
-          pb: 5,
-        }}
-      >
-
-        <Typography sx={{fontSize:40, 
-          fontFamily:'monospace'
-        }}>Contact
-        </Typography>
-
-        <Typography 
-        onChange={(e) => setName(e.target.value)}sx={{fontSize:30, 
-          fontFamily:'monospace',
-          justifyContent: 'center'
-        }}>To contact me, leave me a message...
-        </Typography>
-
-        <TextField
-          id="outlined-basic-1"
-          label="Nume"
-          variant="outlined"
-          onChange={(e) => setName(e.target.value)}
-          sx={{ width:{ xs: '40vw', md: '80vw'} }}
-        />
-        <TextField
-          id="outlined-basic-2"
-          label="Email"
-          variant="outlined"
-          onChange={(e) => setEmail(e.target.value)}
-          sx={{ width:{ xs: '40vw', md: '80vw'} }}
-        />
-        <TextField
-          id="outlined-multiline-flexible"
-          label="Message"
-          multiline
-          variant="outlined"
-          onChange={(e) => setMessage(e.target.value)}
-          sx={{ width:{ xs: '40vw', md: '80vw'} }}
-        />
-
-      <Button variant="contained"
-              onClick={handleSubmit}
-              sx={{width:{xs: 100, md: 150}, height: 50, backgroundColor: '#BAA898', color:'black'}}>
+       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '60%', width: '100vw', flex: '1', gap: 5, pb: 5 }}>
+      <Typography sx={{ fontSize: 40, fontFamily: 'monospace' }}>Contact</Typography>
+      <Typography sx={{ fontSize: 30, fontFamily: 'monospace', textAlign: 'center' }}>
+        To contact me, leave me a message...
+      </Typography>
+      <TextField
+        id="outlined-basic-1"
+        label="Name"
+        variant="outlined"
+        onChange={(e) => setName(e.target.value)}
+        sx={{ width: { xs: '40vw', md: '80vw' } }}
+      />
+      <TextField
+        id="outlined-basic-2"
+        label="Email"
+        variant="outlined"
+        onChange={(e) => setEmail(e.target.value)}
+        sx={{ width: { xs: '40vw', md: '80vw' } }}
+      />
+      <TextField
+        id="outlined-multiline-flexible"
+        label="Message"
+        multiline
+        variant="outlined"
+        onChange={(e) => setMessage(e.target.value)}
+        sx={{ width: { xs: '40vw', md: '80vw' } }}
+      />
+      <Button variant="contained" onClick={handleSubmit} sx={{ width: { xs: 100, md: 150 }, height: 50, backgroundColor: '#BAA898', color: 'black' }}>
         Submit
       </Button>
-
-      </Box>
+    </Box>
 
       <Divider sx={{mb: 3}}/>
 
